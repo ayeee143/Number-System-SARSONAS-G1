@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number System Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Number System Converter</h1>
+        <div class="menu">
+            <button onclick="showConversion('decimalToBinary')">Decimal to Binary</button>
+            <button onclick="showConversion('binaryToDecimal')">Binary to Decimal</button>
+            <button onclick="showConversion('decimalToOctal')">Decimal to Octal</button>
+            <button onclick="showConversion('octalToDecimal')">Octal to Decimal</button>
+            <button onclick="showConversion('decimalToHex')">Decimal to Hexadecimal</button>
+            <button onclick="showConversion('hexToDecimal')">Hexadecimal to Decimal</button>
+        </div>
+        <div id="conversion" class="conversion">
+            <label for="inputNumber">Enter Number:</label>
+            <input type="text" id="inputNumber">
+            <button onclick="convert()">Convert</button>
+            <p id="output"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
