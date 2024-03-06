@@ -1,21 +1,38 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
 }
 
 .container {
-    max-width: 800px;
+    max-width: 400px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    box-shadow: 10px 10px 30px #b8b8b8, -10px -10px 30px #ffffff;
 }
 
 h1 {
     text-align: center;
+    color: #3e3e3e;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.name-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3e3e3e;
+}
+
+.tag-text {
+    font-size: 16px;
+    color: #7e7e7e;
 }
 
 .menu {
@@ -25,16 +42,17 @@ h1 {
 
 .menu button {
     padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
+    background-color: #d4d4d4;
+    color: #3e3e3e;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     margin: 5px;
+    box-shadow: 5px 5px 15px #b8b8b8, -5px -5px 15px #ffffff;
 }
 
 .menu button:hover {
-    background-color: #0056b3;
+    background-color: #c4c4c4;
 }
 
 .conversion {
@@ -43,23 +61,34 @@ h1 {
 
 .conversion label {
     font-weight: bold;
+    color: #3e3e3e;
 }
 
-.conversion input {
+.neu-input {
     padding: 8px;
     font-size: 16px;
     margin-bottom: 10px;
-}
-
-.conversion button {
-    padding: 8px 20px;
-    background-color: #007bff;
-    color: #fff;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    border-radius: 10px;
+    background-color: #e6e6e6;
+    box-shadow: inset 5px 5px 15px #b8b8b8, inset -5px -5px 15px #ffffff;
 }
 
-.conversion button:hover {
-    background-color: #0056b3;
+.neu-button {
+    padding: 8px 20px;
+    background-color: #d4d4d4;
+    color: #3e3e3e;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 5px 5px 15px #b8b8b8, -5px -5px 15px #ffffff;
+}
+
+.neu-button:hover {
+    background-color: #c4c4c4;
+}
+
+#output {
+    font-size: 16px;
+    color: #3e3e3e;
 }

@@ -9,6 +9,14 @@
 <body>
     <div class="container">
         <h1>Number System Converter</h1>
+        <div class="header">
+            <div class="name">
+                <span class="name-text">Gino Sarsonas</span>
+            </div>
+            <div class="tag">
+                <span class="tag-text">Desiigner</span>
+            </div>
+        </div>
         <div class="menu">
             <button onclick="showConversion('decimalToBinary')">Decimal to Binary</button>
             <button onclick="showConversion('binaryToDecimal')">Binary to Decimal</button>
@@ -19,8 +27,8 @@
         </div>
         <div id="conversion" class="conversion">
             <label for="inputNumber">Enter Number:</label>
-            <input type="text" id="inputNumber">
-            <button onclick="convert()">Convert</button>
+            <input type="text" id="inputNumber" class="neu-input">
+            <button onclick="convert()" class="neu-button">Convert</button>
             <p id="output"></p>
         </div>
     </div>
