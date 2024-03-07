@@ -34,43 +34,51 @@ function convert() {
     }
 
     var conversionType = document.getElementById("inputNumber").placeholder;
+    var conversionResult = "";
 
     switch(conversionType) {
         case "Enter Decimal Number":
-            outputElement.innerHTML = "Binary: " + (+inputNumber).toString(2) +
+            conversionResult += "Binary: " + (+inputNumber).toString(2) +
                 "<br>Octal: " + (+inputNumber).toString(8) +
                 "<br>Hexadecimal: " + (+inputNumber).toString(16).toUpperCase();
             break;
+
         case "Enter Binary Number":
-            outputElement.innerHTML = "Decimal: " + parseInt(inputNumber, 2) +
+            conversionResult += "Decimal: " + parseInt(inputNumber, 2) +
                 "<br>Octal: " + parseInt(inputNumber, 2).toString(8) +
                 "<br>Hexadecimal: " + parseInt(inputNumber, 2).toString(16).toUpperCase();
             break;
+
         case "Enter Octal Number":
-            outputElement.innerHTML = "Decimal: " + parseInt(inputNumber, 8) +
+            conversionResult += "Decimal: " + parseInt(inputNumber, 8) +
                 "<br>Binary: " + parseInt(inputNumber, 8).toString(2) +
                 "<br>Hexadecimal: " + parseInt(inputNumber, 8).toString(16).toUpperCase();
             break;
+            
         case "Enter Hexadecimal Number":
-            outputElement.innerHTML = "Decimal: " + parseInt(inputNumber, 16) +
+            conversionResult += "Decimal: " + parseInt(inputNumber, 16) +
                 "<br>Binary: " + parseInt(inputNumber, 16).toString(2) +
                 "<br>Octal: " + parseInt(inputNumber, 16).toString(8);
             break;
     }
+
+    // Update output with conversion results
+    outputElement.innerHTML = conversionResult;
 }
+
 
 /*Dark Mode Function*/
 
 function toggleDarkMode() {
     var body = document.body;
-    var darkModeToggle = document.querySelector('.dark-mode-toggle');
+    var darkModeToggle = document.getElementById("darkModeToggle");
 
     body.classList.toggle("dark-mode");
     
     // Change button text based on mode
     if (body.classList.contains("dark-mode")) {
-        darkModeToggle.innerHTML = "<span class='dark-mode-text'>Light Mode</span>";
+        darkModeToggle.innerText = "Light Mode";
     } else {
-        darkModeToggle.innerHTML = "<span class='dark-mode-text'>Dark Mode</span>";
+        darkModeToggle.innerText = "Dark Mode";
     }
 }

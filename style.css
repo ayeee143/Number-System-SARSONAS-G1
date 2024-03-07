@@ -94,40 +94,43 @@ h1 {
 }
 
 /*Dark Mode Option*/
-
-.dark-mode-toggle {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 8px 12px;
-    background-color: #d4d4d4;
-    color: #3e3e3e;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    box-shadow: 5px 5px 15px #b8b8b8, -5px -5px 15px #ffffff;
-    z-index: 1000;
-}
-
-.dark-mode-toggle:hover {
-    background-color: #c4c4c4;
-}
-
 .dark-mode {
-    background-color: #222;
-    color: #fff;
+    background-color: #1a1a1a; /* Darker background */
+    color: #e0e0e0; /* Lighter text color */
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .dark-mode .neu-input {
-    background-color: #333;
-    color: #fff;
+    background-color: #333; /* Slightly lighter input background */
+    color: #e0e0e0; /* Lighter text color */
 }
 
 .dark-mode .neu-button {
-    background-color: #444;
-    color: #fff;
+    background-color: #444; /* Slightly lighter button background */
+    color: #e0e0e0; /* Lighter text color */
 }
 
 .dark-mode #output {
-    color: #fff;
+    color: #e0e0e0; /* Lighter text color */
+    border: 2px solid #444; /* Darker border */
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #333; /* Slightly lighter background */
+}
+
+/* Animation for dark mode toggle */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.dark-mode-toggle {
+    animation: pulse 1s infinite alternate;
 }
