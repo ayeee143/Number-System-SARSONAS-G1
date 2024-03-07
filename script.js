@@ -63,14 +63,14 @@ function convert() {
 
 function toggleDarkMode() {
     var body = document.body;
-    var darkModeToggle = document.getElementById("darkModeToggle");
+    var darkModeToggle = document.querySelector('.dark-mode-toggle');
 
     body.classList.toggle("dark-mode");
     
     // Change button text based on mode
     if (body.classList.contains("dark-mode")) {
-        darkModeToggle.innerText = "Light Mode";
+        darkModeToggle.innerHTML = "<span class='dark-mode-text'>Light Mode</span>";
     } else {
-        darkModeToggle.innerText = "Dark Mode";
+        darkModeToggle.innerHTML = "<span class='dark-mode-text'>Dark Mode</span>";
     }
 }

@@ -95,6 +95,24 @@ h1 {
 
 /*Dark Mode Option*/
 
+.dark-mode-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 8px 12px;
+    background-color: #d4d4d4;
+    color: #3e3e3e;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 5px 5px 15px #b8b8b8, -5px -5px 15px #ffffff;
+    z-index: 1000;
+}
+
+.dark-mode-toggle:hover {
+    background-color: #c4c4c4;
+}
+
 .dark-mode {
     background-color: #222;
     color: #fff;
