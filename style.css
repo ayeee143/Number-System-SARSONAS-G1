@@ -134,3 +134,17 @@ h1 {
 .dark-mode-toggle {
     animation: pulse 1s infinite alternate;
 }
+
+/*Footer*/
+
+.footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #7e7e7e;
+}
