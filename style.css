@@ -92,3 +92,24 @@ h1 {
     font-size: 16px;
     color: #3e3e3e;
 }
+
+/*Dark Mode Option*/
+
+.dark-mode {
+    background-color: #222;
+    color: #fff;
+}
+
+.dark-mode .neu-input {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode .neu-button {
+    background-color: #444;
+    color: #fff;
+}
+
+.dark-mode #output {
+    color: #fff;
+}

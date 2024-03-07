@@ -58,3 +58,19 @@ function convert() {
             break;
     }
 }
+
+/*Dark Mode Function*/
+
+function toggleDarkMode() {
+    var body = document.body;
+    var darkModeToggle = document.getElementById("darkModeToggle");
+
+    body.classList.toggle("dark-mode");
+    
+    // Change button text based on mode
+    if (body.classList.contains("dark-mode")) {
+        darkModeToggle.innerText = "Light Mode";
+    } else {
+        darkModeToggle.innerText = "Dark Mode";
+    }
+}
