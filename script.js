@@ -24,46 +24,76 @@ function showConversion(conversionType) {
     }
 }
 
+function resetInput() {
+    // Clear the input field
+    document.getElementById("inputNumber").value = "";
+    // Clear the output space
+    document.getElementById("outputSpace").innerHTML = "";
+    // Clear the error message
+    document.getElementById("output").innerHTML = "";
+}
+
 function convert() {
     var inputNumber = document.getElementById("inputNumber").value.trim();
     var outputElement = document.getElementById("output");
+    var conversionType = document.getElementById("inputNumber").placeholder;
+    var conversionResult = "";
 
+    // Check if the input is empty
     if (inputNumber === "") {
         outputElement.innerHTML = "Please enter a number.";
         return;
     }
 
-    var conversionType = document.getElementById("inputNumber").placeholder;
-    var conversionResult = "";
-
     switch(conversionType) {
         case "Enter Decimal Number":
+            // Convert decimal to binary, octal, and hexadecimal
+            if (!/^\d+$/.test(inputNumber)) {
+                outputElement.innerHTML = "Please enter a valid decimal number.";
+                return;
+            }
             conversionResult += "Binary: " + (+inputNumber).toString(2) +
                 "<br>Octal: " + (+inputNumber).toString(8) +
                 "<br>Hexadecimal: " + (+inputNumber).toString(16).toUpperCase();
             break;
 
         case "Enter Binary Number":
+            // Convert binary to decimal, octal, and hexadecimal
+            if (!/^[01]+$/.test(inputNumber)) {
+                outputElement.innerHTML = "Please enter a valid binary number.";
+                return;
+            }
             conversionResult += "Decimal: " + parseInt(inputNumber, 2) +
                 "<br>Octal: " + parseInt(inputNumber, 2).toString(8) +
                 "<br>Hexadecimal: " + parseInt(inputNumber, 2).toString(16).toUpperCase();
             break;
 
         case "Enter Octal Number":
+            // Convert octal to decimal, binary, and hexadecimal
+            if (!/^[0-7]+$/.test(inputNumber)) {
+                outputElement.innerHTML = "Please enter a valid octal number.";
+                return;
+            }
             conversionResult += "Decimal: " + parseInt(inputNumber, 8) +
                 "<br>Binary: " + parseInt(inputNumber, 8).toString(2) +
                 "<br>Hexadecimal: " + parseInt(inputNumber, 8).toString(16).toUpperCase();
             break;
             
         case "Enter Hexadecimal Number":
+            // Convert hexadecimal to decimal, binary, and octal
+            if (!/^[0-9A-Fa-f]+$/.test(inputNumber)) {
+                outputElement.innerHTML = "Please enter a valid hexadecimal number.";
+                return;
+            }
             conversionResult += "Decimal: " + parseInt(inputNumber, 16) +
                 "<br>Binary: " + parseInt(inputNumber, 16).toString(2) +
                 "<br>Octal: " + parseInt(inputNumber, 16).toString(8);
             break;
     }
 
-    // Update output with conversion results
-    outputElement.innerHTML = conversionResult;
+
+    var outputSpaceElement = document.getElementById("outputSpace");
+    outputSpaceElement.innerHTML = conversionResult;
 }
 
 
