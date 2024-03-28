@@ -29,8 +29,6 @@ function resetInput() {
     document.getElementById("inputNumber").value = "";
     // Clear the output space
     document.getElementById("outputSpace").innerHTML = "";
-    // Clear the error message
-    document.getElementById("output").innerHTML = "";
 }
 
 function convert() {
